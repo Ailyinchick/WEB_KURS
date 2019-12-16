@@ -10,9 +10,28 @@
 <head>
     <title>Order</title>
 </head>
+<style>
+    <%@include file='../css/forms.css' %>
+</style>
 <body>
-<div>
-    ${config}
-</div>
+
+<section class="container">
+    <div class="login">
+        <form action="takeOrder">
+
+            <div class="container">
+                ${config}
+            </div>
+
+            <br>
+            <input type="text" name="nickname" placeholder="Введите имя">
+            <br>
+            <input type="submit" value="Order">
+
+        </form>
+    </div>
+</section>
+
+
 </body>
 </html>

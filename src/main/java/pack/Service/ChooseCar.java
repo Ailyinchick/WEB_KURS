@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ChooseCar {
 
+    String carType;
+
     public String getCarByConfig(String type, String body, String color) {
         return "" + getTypeMapping(type) + getBodyMapping(body) + getColorMapping(color);
     }
@@ -21,8 +23,10 @@ public class ChooseCar {
 
     public String getTypeMapping(String type) {
         if (type.equalsIgnoreCase("ведро")) {
+            this.carType="Bentley";
             return "<img src=\"resources/images/bentley/";
         } else {
+            this.carType="Bentley";
             return "<img src=\"resources/images/jiga/";
         }
     }
@@ -35,4 +39,7 @@ public class ChooseCar {
         }
     }
 
+    public String getCarType() {
+        return carType;
+    }
 }

@@ -3,31 +3,38 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
+<style>
+    <%@include file='../css/forms.css' %>
+</style>
 <body>
-<div> Сконфигурируйте автомобиль</div>
+<section class="container">
+    <div class="login">
+        <div> Сконфигурируйте автомобиль</div>
 
-<div name="carType" hidden>
-    ${car}
-</div>
-<br>
-<form action="configCar">
+        <div name="carType" hidden>
+            ${car}
+        </div>
+        <br>
+        <form action="configCar">
 
-    <select id="body" name="body">
-        <option> Седан</option>
-        <option> Купе</option>
-    </select>
-    <br>
+            <select id="body" name="body">
+                <option> Седан</option>
+                <option> Купе</option>
+            </select>
+            <br>
 
-    <select id="color" name="color">
-        <option> Белый</option>
-        <option> Чёрный</option>
-        <option> Зелёный</option>
-    </select>
-    <br>
+            <select id="color" name="color">
+                <option> Белый</option>
+                <option> Чёрный</option>
+                <option> Зелёный</option>
+            </select>
+            <br>
 
-    <input type="submit" value="Выбрать конфигурацию">
+            <p class="submit"><input type="submit" name="commit" value="Выбрать конфигурацию"></p>
 
-</form>
+        </form>
+    </div>
+</section>
 
 </body>
 </html>

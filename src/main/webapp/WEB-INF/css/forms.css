@@ -112,8 +112,13 @@ body {
 }
 
 .container {
-    margin: 80px auto;
-    width: 640px;
+    width: 96%;
+    max-width: 960px;
+    margin: 80px auto; /* центрируем основной контейнер */
+}
+img {
+    width: 100%; /* ширина картинки */
+    height: auto; /* высота картинки */
 }
 
 .login {

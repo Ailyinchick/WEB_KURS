@@ -1,3 +1,4 @@
+/*
 package pack.model;
 
 import org.hibernate.annotations.Fetch;
@@ -14,7 +15,6 @@ public class Car {
     private String type;
     private String color;
     private String body;
-    private int price;
 
 
     @Override
@@ -25,14 +25,6 @@ public class Car {
                 ", color='" + color + '\'' +
                 ", body='" + body + '\'' +
                 '}';
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public int getId() {
@@ -67,3 +59,4 @@ public class Car {
         this.body = body;
     }
 }
+*/
