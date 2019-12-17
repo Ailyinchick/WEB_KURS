@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StartController {
     public static String type;
 
-    @GetMapping(value = "/")
-    public String start() {
-        return "start";
-    }
-
     @GetMapping(value = "/selectJiga")
     public String selectJiga(ModelMap modelMap) {
         type = "жигуль";
@@ -26,6 +21,11 @@ public class StartController {
         type = "ведро";
         modelMap.addAttribute("car", "Ведро");
         return "carPage";
+    }
+
+    @GetMapping(value = "/start")
+    public String start() {
+        return "start";
     }
 
 }

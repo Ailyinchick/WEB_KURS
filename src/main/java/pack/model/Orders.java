@@ -1,6 +1,5 @@
 package pack.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -16,14 +15,27 @@ public class Orders {
     @Column
     private String date;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userId")
+    private User user;
+
     @Override
     public String toString() {
-        return "Order{" +
+        return "Orders{" +
                 "id=" + id +
                 ", owner='" + owner + '\'' +
                 ", car='" + car + '\'' +
                 ", date='" + date + '\'' +
+                ", user=" + user +
                 '}';
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getId() {

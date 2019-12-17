@@ -24,8 +24,6 @@
             </div>
 
             <br>
-            <input type="text" name="nickname" placeholder="Введите имя">
-            <br>
             <input type="submit" value="Order">
 
         </form>
