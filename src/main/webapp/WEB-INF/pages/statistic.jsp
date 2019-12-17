@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ailyi
@@ -12,27 +13,32 @@
 </head>
 <style>
     <%@include file='../css/forms.css' %>
+    <%@include file='../css/table.css' %>
 </style>
 <body>
 
 <section class="container">
     <div class="login">
 
-        <table border="2">
+        <table border="2" class="table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Заказчик</th>
                 <th>Авто</th>
                 <th>Дата</th>
             </tr>
-            <c:forEach items="${statistic}" var="item">
+            </thead>
+            <tbody>
+            <c:forEach items="${statistic}" var="stat">
                 <tr>
-                    <td> ${item.id} чего</td>
-                    <td> ${item.owner} </td>
-                    <td> ${item.car} </td>
-                    <td> ${item.date} </td>
+                    <td> ${stat.id} </td>
+                    <td> ${stat.owner} </td>
+                    <td> ${stat.car} </td>
+                    <td> ${stat.date} </td>
                 </tr>
             </c:forEach>
+            </tbody>
         </table>
     </div>
 </section>

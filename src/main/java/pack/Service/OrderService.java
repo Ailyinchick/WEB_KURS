@@ -16,11 +16,6 @@ public class OrderService {
     OrderRepos orderRepos;
 
     @Transactional
-    public List<Orders> getAll() {
-        return orderRepos.findAll(Orders.class, orderRepos.getBeanToBeAutowired());
-    }
-
-    @Transactional
     public void write(Orders orders) {
         orderRepos.testingCreateMethod(orders, orderRepos.getBeanToBeAutowired());
     }

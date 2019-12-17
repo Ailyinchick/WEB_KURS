@@ -28,5 +28,4 @@ public class StartController {
         return "carPage";
     }
 
-
 }

@@ -26,8 +26,8 @@ public class OrdersServiceTest extends AbstractTestNGSpringContextTests {
     @Autowired
     OrderRepos orderRepos;
 
-    @Test
+ /*   @Test
     public void testWrite() {
         System.out.println(orderService.getAll());
-    }
+    }*/
 }
